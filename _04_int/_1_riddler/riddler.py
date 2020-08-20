@@ -21,17 +21,21 @@ if __name__ == '__main__':
     score = 0
     messagebox.showinfo(None, 'Lets play a riddle quiz!  Write every answer as lowercase letters. ')
     riddle1 = simpledialog.askstring(None, 'What can fill a room but takes up no space? )')
-    riddle2 = simpledialog.askstring(None, 'The more you take, the more you leave behind. What am I?')
-    riddle3 = simpledialog.askstring(None, 'When does Christmas come before Thanksgiving?')
     if  riddle1 == 'light':
         messagebox.showinfo(None, 'You are correct!')
         score+=1
     else:
         messagebox.showinfo(None, 'You are wrong! The correct answer was light.')
-    if  riddle2 == 'footsteps':
+
+    riddle2 = simpledialog.askstring(None, 'The more you take, the more you leave behind. What am I?')
+    if riddle2 == 'footsteps':
         messagebox.showinfo(None, 'You are correct!')
+        score += 1
     else:
         messagebox.showinfo(None, 'You are wrong! The correct answer was footsteps.')
+
+    riddle3 = simpledialog.askstring(None, 'When does Christmas come before Thanksgiving?')
+
 
 
     if riddle3 == 'the dictionary':
@@ -39,7 +43,7 @@ if __name__ == '__main__':
         score+=1
     else:
         messagebox.showinfo(None, 'You are wrong! The correct answer was the dictionary.')
-    messagebox.showinfo('You got ' + str(score) + ' out of 3 riddles correct')
+    messagebox.showinfo(None, 'You got ' + str(score) + ' out of 3 riddles correct.')
 
 
 
